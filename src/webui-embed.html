@@ -7,7 +7,9 @@
         <style>
             body {
                 font-family: "Courier New", Courier, monospace;
-			font-weight: bold;
+		font-style: bold;
+		background-color: black;
+		color: white;
             }
             header {
                 font-size: larger;
@@ -43,14 +45,14 @@
                 word-wrap: break-word;
             }
         </style>
-    </head><br>
-    <body>
-        <center><header>SOLOPOOL.US <br> Monero Mining Pool</header>
-		PPLNS Payout<br>
-		Mining URL = solopool.us:4242 <br>
-		Username = Your Monero Wallet Address <br>
-		Password = X <br>
-		Nicehash & Mining Rig Rentals Compatible <br><br>
+    </head>
+    <body><center>
+        <header>Anonymous Monero Mining Pool</header>
+	    <p>PPLNS PAyout System</p>
+	    <p>Mining URL: solopool.us</p>
+	    <p>Username: Your Monero Wallet Address</p>
+	    <p>Password = X </p>
+	    <p>Nicehash & MRR Compatible</p>
         <table>
             <tr><td>Pool HR: </td><td id="pool_hashrate"></td></tr>
             <tr><td>Network HR: </td><td id="network_hashrate"></td></tr>
@@ -59,7 +61,7 @@
             <tr><td>Last block found: </td><td id="last_block_found"></td></tr>
             <tr><td>Last template: </td><td id="last_template_fetched"></td></tr>
             <tr><td>Round HR: </td><td id="round_hashrate"></td></tr>
-            <tr><td>Pool Effort: </td><td id="round_hashes"></td></tr>
+            <tr><td>Round hashes: </td><td id="round_hashes"></td></tr>
             <tr><td>Payment threshold: </td><td id="payment_threshold"></td></tr>
             <tr><td>Pool fee: </td><td id="pool_fee"></td></tr>
             <tr><td>Pool port: </td><td id="pool_port"></td></tr>
@@ -70,8 +72,9 @@
             <tr class="miner"><td>Balance due: </td><td id="miner_balance"></td></tr>
             <tr><td>Miner address: </td><td id="address" contenteditable="true"></td></tr>
         </table>
-        <small><a href="https://github.com/jtgrassie/monero-pool">MONERO-POOL</a></small>
-        <script></center>
+        <small><a href="https://github.com/jtgrassie/monero-pool">https://github.com/jtgrassie/monero-pool</a></small>
+    </center>
+	    <script>
             function format_last_time(last)
             {
                 var now = new Date().getTime() / 1000;
