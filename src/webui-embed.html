@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
-    <head>        
-	<title>SOLOPOOL.US Anonymous Monero Mining Pool</title>
+    <head>
+        <title>SOLOPOOL.US MONERO MINING POOL</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
- <style>
+        <style>
             body {
                 font-family: "Courier New", Courier, monospace;
+			font-weight: bold;
             }
             header {
                 font-size: larger;
@@ -42,17 +42,16 @@
                 white-space: initial;
                 word-wrap: break-word;
             }
-        </style>	
+        </style>
+    </head><br>
     <body>
-     <br>
-	<center><h4 style="color:white">SOLOPOOL.US<br>Anonymous Monero Mining Pool</h4>
-           PPLNS PAYOUT SYSTEM <br>
-		Mining URL: solopool.us:4243 <br>
+        <center><header>SOLOPOOL.US <br> Monero Mining Pool</header>
+		PPLNS Payout<br>
+		Mining URL = solopool.us:4242 <br>
 		Username = Your Monero Wallet Address <br>
-		Password - x  <br>
-		Nicehash & MRR Compatible</p></center>
-	     <center>
-    		<table>
+		Password = X <br>
+		Nicehash & Mining Rig Rentals Compatible <br><br>
+        <table>
             <tr><td>Pool HR: </td><td id="pool_hashrate"></td></tr>
             <tr><td>Network HR: </td><td id="network_hashrate"></td></tr>
             <tr><td>Network height: </td><td id="network_height"></td></tr>
@@ -60,17 +59,19 @@
             <tr><td>Last block found: </td><td id="last_block_found"></td></tr>
             <tr><td>Last template: </td><td id="last_template_fetched"></td></tr>
             <tr><td>Round HR: </td><td id="round_hashrate"></td></tr>
-            <tr><td>Round hashes: </td><td id="round_hashes"></td></tr>
+            <tr><td>Pool Effort: </td><td id="round_hashes"></td></tr>
             <tr><td>Payment threshold: </td><td id="payment_threshold"></td></tr>
             <tr><td>Pool fee: </td><td id="pool_fee"></td></tr>
             <tr><td>Pool port: </td><td id="pool_port"></td></tr>
             <tr><td>Pool SSL port: </td><td id="pool_ssl_port"></td></tr>
             <tr><td>Allow self-select: </td><td id="allow_self_select"></td></tr>
             <tr><td>Miners connected: </td><td id="connected_miners"></td></tr>
-        </table></center>
-        </container><br>
-        <center><h6><a href="https://github.com/jtgrassie/monero-pool">monero-pool</a></h6></center>
-        <script>
+            <tr class="miner"><td>Your HR: </td><td id="miner_hashrate"></td></tr>
+            <tr class="miner"><td>Balance due: </td><td id="miner_balance"></td></tr>
+            <tr><td>Miner address: </td><td id="address" contenteditable="true"></td></tr>
+        </table>
+        <small><a href="https://github.com/jtgrassie/monero-pool">MONERO-POOL</a></small>
+        <script></center>
             function format_last_time(last)
             {
                 var now = new Date().getTime() / 1000;
@@ -116,7 +117,7 @@
                 else if (h < 1e-6)
                     return max_precision(h*1e+9, 0) + " nH";
                 else if (h < 1e-3)
-                    return max_precision(h*1e+6, 0) + " Î¼H";
+                    return max_precision(h*1e+6, 0) + " μH";
                 else if (h < 1)
                     return max_precision(h*1e+3, 0) + " mH";
                 else if (h < 1e+3)
