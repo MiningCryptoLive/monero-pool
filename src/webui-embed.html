@@ -5,10 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
         <style>
             body {
-                font-family: "Courier New", Courier, monospace;
+                font-family: "Arial", serif;
 		font-style: bold;
 		background-color: black;
 		color: white;
@@ -89,10 +88,30 @@
             <tr><td>Pool SSL port: </td><td id="pool_ssl_port"></td></tr>
      		 <tr><td>Current Price: 1 XMR </td><td id="info2"</td></tr>
 		 <tr><td>Block Reward: 0.6 XMR </td><td id="info1"</td></tr>
+		 <tr><td>1 XMR to BTC</td><td id="info3"</td></tr>
             <tr class="miner"><td>Your HR: </td><td id="miner_hashrate"></td></tr>
             <tr class="miner"><td>Balance due: </td><td id="miner_balance"></td></tr>
             <tr><td></td><td id="address" contenteditable="true"></td></tr>
         </table>
+	<script>
+const getBtcData3 = async () => {
+   fetch('https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=BTC')
+  .then(response => response.json())
+  .then(data3 => {
+    console.log(data3);
+    document.getElementById("info3").innerHTML = '<b style="color:#FFFFFF;"> ' + 1 * data3.BTC + '</b>'
+    
+  });
+}
+getBtcData3();
+tcount=setInterval(function(){
+  tcount++
+  if (tcount==10) {getBtcData3(); tcount=0}
+  document.getElementById("infotime3").innerHTML = 'Next update in ' + (900-tcount) + ' seconds'
+},1000);
+
+</script>
+
 		<script>
 const getBtcData2 = async () => {
    fetch('https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD')
@@ -133,6 +152,9 @@ tcount=setInterval(function(){
 		<hr width="500px;" color="#ff4500" size="5">
         <small><a href="https://github.com/jtgrassie/monero-pool" style="color:#ff4500">monero-pool</a></small>
     </center>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
 	    <script>
             function format_last_time(last)
             {
