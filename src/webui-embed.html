@@ -4,28 +4,36 @@
         <title>solopool.us monero mining pool</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             body {
                 font-family: "Courier New", Courier, monospace;
 			background-color: #000000;
-			color: #FFFFFF;
+			color: #ffffff;
+			text-align: center;
             }
+		hr {
+		 background-color: #FF4500; height: 3px; border: 0; width: 100%;
+		 }
             header {
-                font-size: larger;
+                font-size: 26px;
                 font-weight: bold;
                 padding-bottom: 1em;
             }
-            table {
+		header1 {
+                font-size: 24px;
+                font-style: italic;
                 padding-bottom: 1em;
             }
-		ul {
-  list-style-type: none;
-}
-            td {
-                vertical-align: top;
-                white-space: nowrap;
+
+            table {
+			padding: 12px;
+                padding-bottom: 1em;
             }
+            td {
+            padding: 12px;
+            
+        }
             td:last-child {
                 white-space: unset;
             }
@@ -52,36 +60,32 @@
     <body><center><br>
 	   <header>SOLOPOOL.US</header>
         <header>Anonymous Monero Mining Pool</header>
-		<ul>
-		<li>PPLNS PAYOUT</li>
-		<li>Connect= solopool.us:4242</li>
-		<li>Username = Your Monero Address</li>
-		<li>Password = x</li>
-		<li> Nicehash & MRR Compatible</li>
-		</ul>
+	
+	   <header1>Mining URL = solopool.us:4242<br>Username = Your Monero Address<br>Password = x<br>Nicehash & MRR Compatible</header1><br />
+	   <hr>
         <table>
             <tr><td>Pool Hashrate: </td><td id="pool_hashrate"></td></tr>
             <tr><td>Network Hashrate: </td><td id="network_hashrate"></td></tr>
-            <tr><td>Network height: </td><td id="network_height"></td></tr>
-            <tr><td>Blocks found: </td><td id="pool_blocks_found"></td></tr>
-            <tr><td>Last block found: </td><td id="last_block_found"></td></tr>
-            <tr><td>Last template: </td><td id="last_template_fetched"></td></tr>
+            <tr><td>Network Height: </td><td id="network_height"></td></tr>
+            <tr><td>Blocks Found: </td><td id="pool_blocks_found"></td></tr>
+            <tr><td>Last Block Found: </td><td id="last_block_found"></td></tr>
+            <tr><td>Last Template: </td><td id="last_template_fetched"></td></tr>
             <tr><td>Round HR: </td><td id="round_hashrate"></td></tr>
             <tr><td>Pool Effort: </td><td id="round_hashes"></td></tr>
-            <tr><td>Payment threshold: </td><td id="payment_threshold"></td></tr>
-            <tr><td>Pool fee: </td><td id="pool_fee"></td></tr>
-            <tr><td>Pool port: </td><td id="pool_port"></td></tr>
+            <tr><td>Minimum Payout: </td><td id="payment_threshold"></td></tr>
+            <tr><td>Pool Fee: </td><td id="pool_fee"></td></tr>
+            <tr><td>Pool Port: </td><td id="pool_port"></td></tr>
             <tr><td>Pool SSL port: </td><td id="pool_ssl_port"></td></tr>
-            <tr><td>Miners connected: </td><td id="connected_miners"></td></tr>
-		 <tr><td>Current Price</td><td id="info2"></td></tr>
+            <tr><td>Miners Online: </td><td id="connected_miners"></td></tr>
+		  <tr><td>Current Price</td><td id="info2"></td></tr>
 		 <tr><td>Block Reward</td><td id="info1"></td></tr>
 		 <tr><td><i class="fab fa-monero"></i> to <i class="fab fa-btc"</i></td><td id="info3"></td></tr>
             <tr class="miner"><td>Your HR: </td><td id="miner_hashrate"></td></tr>
             <tr class="miner"><td>Balance due: </td><td id="miner_balance"></td></tr>
         </table>
         <small><a href="https://github.com/jtgrassie/monero-pool">monero-pool</a></small>
-</center>
-<script>
+	</center>
+	<script>
 const getBtcData3 = async () => {
    fetch('https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=BTC')
   .then(response => response.json())
@@ -183,7 +187,7 @@ tcount=setInterval(function(){
                 else if (h < 1e-6)
                     return max_precision(h*1e+9, 0) + " nH";
                 else if (h < 1e-3)
-                    return max_precision(h*1e+6, 0) + " ?H";
+                    return max_precision(h*1e+6, 0) + " μH";
                 else if (h < 1)
                     return max_precision(h*1e+3, 0) + " mH";
                 else if (h < 1e+3)
