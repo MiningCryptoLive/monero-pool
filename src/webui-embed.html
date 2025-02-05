@@ -119,13 +119,13 @@
         }
 
         .card .icon {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
             margin-bottom: 0px;
         }
 
         .card h3 {
-            font-size: 1rem;
+            font-size: 1.5rem;
             text-align: center;
             margin: 0px 0;
             color: var(--card-title-color); /* Use dynamic color */
@@ -133,7 +133,7 @@
         }
 
         .card span {
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--primary-color);
         }
@@ -484,7 +484,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <div class="header-content" style="color:#ff4500;">
-            SOLOPOOL.PRO
+            SOLOPOOL.US
         </div>
     </header>
 
@@ -503,7 +503,6 @@
     <h4 class="centered">Monero Mining Pool</h4>
     <div class="intro-text centered">
         <img src="https://www.svgrepo.com/show/303333/monero-logo.svg" alt="Monero Logo" class="monero-logo">
-        <h2>Monero Manifesto</h2>
     </div>
 
     <div class="container">
@@ -695,7 +694,7 @@
     {
         "algo": "rx/0",
         "coin": "XMR",
-        "url": "solopool.pro:4200",
+        "url": "solopool.us:4200",
         "user": "YOUR_WALLET_ADDRESS",
         "pass": "x",
         "keepalive": true,
@@ -749,11 +748,11 @@
             <h3>4. Start Miner without config.json file (OPTIONAL)</h3>
             <p>Linux/MacOS</p>
             <pre>
-    ./xmrig -o solopool.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
+    ./xmrig -o solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
             </pre>
             <p>Windows</p>
             <pre>
-    xmrig.exe -o solopool.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
+    xmrig.exe -o solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
             </pre>
         </div>
     
@@ -799,7 +798,7 @@
                 <li><a href="https://github.com/MiningCryptoLive" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="mailto:celldr69@gmail.com"><i class="fas fa-envelope"></i></a></li>
             </ul>
-            <p style="font-size: 0.7rem;"> &copy; 2025 SOLOPOOL.PRO - No Rights Reserved</p>
+            <p style="font-size: 0.7rem;"> &copy; 2025 SOLOPOOL.US - No Rights Reserved</p>
         </div>
     </footer>
 
@@ -925,7 +924,7 @@
         // Function to fetch stats from the server
         async function fetchStats() {
             try {
-                const response = await fetch('http://solopool.pro:4243/stats');
+                const response = await fetch('http://solopool.us:4243/stats');
                 const data = await response.json();
 
                 // Calculate Effort
