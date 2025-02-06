@@ -516,6 +516,11 @@
                 </div>
                 <div class="card">
                     <i class="fa-brands fa-monero icon"></i>
+                    <h3>Block Reward</h3>
+                    <span id="info1">Loading...</span>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>Market Cap</h3>
                     <span id="market-cap">Loading...</span>
                 </div>
@@ -1060,5 +1065,23 @@
             fetchMoneroData();
             setInterval(fetchMoneroData, 60000); // Refresh every 30 seconds (30,000 milliseconds)
         </script>
+    <script>
+const getBtcData1 = async () => {
+   fetch('https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD')
+  .then(response => response.json())
+  .then(data1 => {
+    console.log(data1);
+    document.getElementById("info1").innerHTML = '<b style="color:#ff4500;"> $' + 0.6 * data1.USD + '</b>'
+    
+  });
+}
+getBtcData1();
+tcount=setInterval(function(){
+  tcount++
+  if (tcount==10) {getBtcData1(); tcount=0}
+  document.getElementById("infotime1").innerHTML = 'Next update in ' + (900-tcount) + ' seconds'
+},1000);
+
+</script>
 </body>
 </html>
