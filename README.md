@@ -221,7 +221,7 @@ In pool.conf file change webui listen to: 127.0.0.1
 sudo nano /etc/nginx/sites-available/default
 
 add to file:
-
+<pre>
 server {
  listen 80;
  listen [::]:80;
@@ -232,7 +232,7 @@ server {
  proxy_pass http://127.0.0.1:4243/stats;
   }
 }
-
+</pre>
 ctrl x and save file. Then run sudo nginx -t to verify configuration is correct. Then sudo service nginx restart.
 Make sure to change line #938 of webui-embed.html to point to your domain.
 
