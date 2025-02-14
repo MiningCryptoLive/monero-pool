@@ -214,7 +214,7 @@ use of a JSON endpoint to populate the stats. Thus, a sensible option for your
 own web UI is to simply make use of that endpoint (for stats and balances), and
 keep your website completely separate, served by Apache or Nginx for example.
 
-NGINX Configuration to serve website via https:
+## NGINX Configuration to serve website via https:
 
 In pool.conf file change webui listen to: 127.0.0.1 
 
