@@ -232,7 +232,7 @@ server {
  proxy_pass http://127.0.0.1:4243/stats;
   }
 }
-</pre>
+
 ctrl x and save file. Then run sudo nginx -t to verify configuration is correct. Then sudo service nginx restart.
 Make sure to change line #938 of webui-embed.html to point to your domain.
 
@@ -248,7 +248,7 @@ and now you can obtain your auto-renewed SSL certificate for free!
 
 sudo certbot --nginx -d <your.domain.com> will install an ssl certificate. you will have to answer a couple of questions to complete the ssl certificate installation. Now you can access your website via https:your.domain.com
 
-
+</pre>
 
 ## SSL
 
