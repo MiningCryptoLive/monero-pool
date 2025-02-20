@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monero Mining Pool</title>
+    <title>SOLOPOOL.US Monero Mining Pool</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -34,7 +34,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: var(--secondary-color);
+            background: var(--background-color);
             color: #FFFFFF;
             padding: 5px;
             font-size: 1.5rem;
@@ -61,7 +61,7 @@
         }
 
         .intro-text h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 400;
             color: var(--card-title-color);
             margin-bottom: 10px;
@@ -99,7 +99,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 15px;
         }
 
@@ -125,7 +125,7 @@
         }
 
         .card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             text-align: center;
             margin: 0px 0;
             color: var(--card-title-color); /* Use dynamic color */
@@ -166,7 +166,7 @@
             align-items: center;
             margin-top: 0px;
             padding: 0px 0;
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             background-color: #f8f9fa; /* Optional: Adds a light background for better contrast */
         }
@@ -195,8 +195,8 @@
 
         .social-icons a {
             text-decoration: none;
-            color: var(--text-muted);
-            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
         }
 
         .social-icons a:hover {
@@ -346,7 +346,7 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: var(--text-muted);
+            color: var(--primary-color);
             font-size: 1rem;
             transition: color 0.3s;
         }
@@ -483,7 +483,7 @@
         <div class="burger-menu" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
-        <div class="header-content">
+        <div class="header-content" style="color:#ff6600;">
             SOLOPOOL.US
         </div>
     </header>
@@ -494,13 +494,13 @@
         <ul>
             <li><i class="fas fa-chart-bar"></i><a href="#market-stats" onclick="smoothScroll(event, '#market-stats')">Network Stats</a></li>
             <li><i class="fas fa-server"></i><a href="#pool-stats" onclick="smoothScroll(event, '#pool-stats')">Pool Stats</a></li>
-            <li><i class="fas fa-user"></i><a href="#miner-section" onclick="smoothScroll(event, '#miner-section')">Miner Stats</a></li>
+            <li><i class="fas fa-user"></i><a href="#miner-section" onclick="smoothScroll(event, '#miner-section')">Miner Dashboard</a></li>
             <li><i class="fas fa-play-circle"></i><a href="#getting-started" onclick="smoothScroll(event, '#getting-started')">Getting Started</a></li>
             <li><i class="fas fa-book"></i><a href="#monero-resources" onclick="smoothScroll(event, '#monero-resources')">Resources</a></li>
         </ul>
     </nav>
 
-    <h4 class="centered">Monero Mining Pool</h4>
+    <h2 class="centered">High Performance Monero Mining Pool</h2>
     <div class="intro-text centered">
         <img src="https://www.svgrepo.com/show/303333/monero-logo.svg" alt="Monero Logo" class="monero-logo">
     </div>
@@ -510,22 +510,22 @@
             <h2 class="centered" id="market-stats">Monero Network Statistics</h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fab fa-monero icon"></i>
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>Market Price</h3>
                     <span id="price-usd">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fab fa-monero icon"></i>
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>Market Cap</h3>
                     <span id="market-cap">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fab fa-monero icon"></i>
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>24h Change</h3>
                     <span id="change">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fab fa-monero icon"></i>
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>Circulating Supply</h3>
                     <span id="supply">Loading...</span>
                 </div>
@@ -535,8 +535,8 @@
         <section>
             <h2></h2>
             <div class="grid">
-                <div class="card">
-                    <i class="fab fa-monero icon"></i>
+			<div class="card">
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>Block Reward</h3>
                     <span id="info1">Loading...</span>
                 </div>
@@ -546,12 +546,12 @@
                     <span id="network-hashrate">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-calculator icon"></i>
+                    <i class="fa fa-bar-chart icon"></i>
                     <h3>Network Difficulty</h3>
                     <span id="network-difficulty">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-cubes icon"></i>
+                    <i class="fas fa-cube icon"></i>
                     <h3>Network Height</h3>
                     <span id="network-height">Loading...</span>
                 </div>
@@ -588,7 +588,7 @@
             <h2></h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-cubes icon"></i>
+                    <i class="fas fa-cube icon"></i>
                     <h3>Pool Blocks Found</h3>
                     <span id="pool-blocks-found">Loading</span>
                 </div>
@@ -598,13 +598,13 @@
                     <span id="last-block-found">Never</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-percentage icon"></i>
-                    <h3>Pool Luck</h3>
+                    <i class="fas fa-percent icon"></i>
+                    <h3>Current Effort</h3>
                     <span id="current-effort">0 %</span>
                 </div>
                 <div class="card">
                     <i class="fas fa-calendar icon"></i>
-                    <h3>Est. Time To Find Block</h3>
+                    <h3>Estimated Time</h3>
                     <span id="estimated-block-time">N/A</span>
                 </div>
             </div>
@@ -624,11 +624,11 @@
         </section>
 
         <section>
-            <h3 class="centered">Workers Statistics</h3>
+            <h3>Workers Statistics</h3>
             <div class="grid">
                 <div class="card">
                     <i class="fas fa-microchip icon"></i>
-                    <h3>Connected Rigs</h3>
+                    <h3>Mining Rigs</h3>
                     <span id="worker-count">0</span>
                 </div>
                 <div class="card">
@@ -646,12 +646,22 @@
                     <h3>Average HashRate (1D)</h3>
                     <span id="miner-hr-1D">0 H/s</span>
                 </div>
-            </div>
+			<div class="card">
+                    <i class="fas fa-tachometer-alt icon"></i>
+                    <h3>Average HashRate (7D)</h3>
+                    <span id="miner-hr-7D">0 H/s</span>
+                </div>
+			<div class="card">
+                    <i class="fas fa-tachometer-alt icon"></i>
+                    <h3>Average HashRate (1M)</h3>
+                    <span id="miner-hr-1M">0 H/s</span>
+                </div>
+
             </div>
         </section>
 
         <section>
-            <h3 class="centered">Wallet</h3>
+            <h3>Wallet</h3>
             <div class="grid">
                 <div class="card">
                     <i class="fas fa-wallet icon"></i>
@@ -662,17 +672,17 @@
         </section>
 
         <section>
-            <h3 class="centered">Payment Details</h3>
+            <h3>Payment Details</h3>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-credit-card-alt   icon"></i>
+                    <i class="fas fa-credit-card-alt icon"></i>
                     <h3>Payment Method</h3>
                     <span>PPLNS</span>
                 </div>
                 <div class="card">
                     <i class="fas fa-wallet icon"></i>
                     <h3>Payment Threshold</h3>
-                    <span id="payment-threshold">0.01 XMR</span>
+                    <span id="payment-threshold"> XMR</span>
                 </div>
                 <div class="card">
                     <i class="fas fa-percentage icon"></i>
@@ -700,7 +710,7 @@
     {
         "algo": "rx/0",
         "coin": "XMR",
-        "url": "xmr.solopool.us:4200",
+        "url": "solopool.us:4200",
         "user": "YOUR_WALLET_ADDRESS",
         "pass": "x",
         "keepalive": true,
@@ -754,11 +764,11 @@
             <h3>4. Start Miner without config.json file (OPTIONAL)</h3>
             <p>Linux/MacOS</p>
             <pre>
-    ./xmrig -o xmr.solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
+    ./xmrig -o solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
             </pre>
             <p>Windows</p>
             <pre>
-    xmrig.exe -o xmr.solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
+    xmrig.exe -o solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
             </pre>
         </div>
     
@@ -780,7 +790,7 @@
                 <li class="resource-item">
                     <a href="https://forum.monero.space/" target="_blank" class="resource-link">
                         <i class="fa fa-comments resource-icon"></i>
-                        Official Monero Forum
+                        Official Forum
                     </a>
                 </li>
                 <li class="resource-item">
@@ -804,7 +814,7 @@
                 <li><a href="https://github.com/MiningCryptoLive" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="mailto:celldr69@gmail.com"><i class="fas fa-envelope"></i></a></li>
             </ul>
-            <p style="font-size: 0.7rem;"> &copy; 2025 SOLOPOOL.US - All Rights Reserved</p>
+            <p style="font-size: 0.7rem;"> &copy; 2025 SOLOPOOL.US - No Rights Reserved</p>
         </div>
     </footer>
 
@@ -907,7 +917,7 @@
             if (h < 1e-12) return "0 H";
             else if (h < 1e-9) return max_precision(h * 1e+12, 0) + " pH";
             else if (h < 1e-6) return max_precision(h * 1e+9, 0) + " nH";
-            else if (h < 1e-3) return max_precision(h * 1e+6, 0) + " μH";
+            else if (h < 1e-3) return max_precision(h * 1e+6, 0) + " Î¼H";
             else if (h < 1) return max_precision(h * 1e+3, 0) + " mH";
             else if (h < 1e+3) return parseInt(h) + " H";
             else if (h < 1e+6) return max_precision(h * 1e-3, 2) + " KH";
@@ -1036,24 +1046,7 @@
                 setInterval(fetchStats, 30000);
             };
         </script>
-       <script>
-const getBtcData1 = async () => {
-   fetch('https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD')
-  .then(response => response.json())
-  .then(data1 => {
-    console.log(data1);
-    document.getElementById("info1").innerHTML = '<b style="color:#ff6600;"> $' + 0.6 * data1.USD + '</b>'
-    
-  });
-}
-getBtcData1();
-tcount=setInterval(function(){
-  tcount++
-  if (tcount==10) {getBtcData1(); tcount=0}
-  document.getElementById("infotime1").innerHTML = 'Next update in ' + (900-tcount) + ' seconds'
-},1000);
 
-</script>
         <script>
             async function fetchMoneroData() {
                 const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=monero&order=market_cap_desc&per_page=1&page=1&sparkline=false';
@@ -1083,5 +1076,23 @@ tcount=setInterval(function(){
             fetchMoneroData();
             setInterval(fetchMoneroData, 60000); // Refresh every 30 seconds (30,000 milliseconds)
         </script>
+    <script>
+const getBtcData1 = async () => {
+   fetch('https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD')
+  .then(response => response.json())
+  .then(data1 => {
+    console.log(data1);
+    document.getElementById("info1").innerHTML = '<b style="color:#ff6600;"> $' + 0.6 * data1.USD + '</b>'
+    
+  });
+}
+getBtcData1();
+tcount=setInterval(function(){
+  tcount++
+  if (tcount==10) {getBtcData1(); tcount=0}
+  document.getElementById("infotime1").innerHTML = 'Next update in ' + (900-tcount) + ' seconds'
+},1000);
+
+</script>
 </body>
 </html>
