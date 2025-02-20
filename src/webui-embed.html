@@ -10,7 +10,7 @@
 
         :root {
             --primary-color: #FF6600;
-            --secondary-color: #1F2937;
+            --secondary-color: #333333;
             --background-color: #F9FAFB;
             --card-background: #FFFFFF;
             --text-color: #111827;
@@ -34,7 +34,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: var(--background-color);
+            background: var(--secondary-color);
             color: #FFFFFF;
             padding: 5px;
             font-size: 1.5rem;
@@ -99,8 +99,8 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 10px;
         }
 
         .card {
@@ -204,8 +204,8 @@
         }
 
         .dark-mode {
-            --background-color: #111827;
-            --card-background: #1F2937;
+            --background-color: #000000;
+            --card-background: #333333;
             --text-color: #FFFFFF;
             --text-muted: #9CA3AF;
             --border-color: #374151;
