@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLOPOOL.US Monero Mining Pool</title>
+    <title>SOLOPOOL.US MONERO MINING POOL</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
 
         :root {
             --primary-color: #FF6600;
-            --secondary-color: #333333;
+            --secondary-color: #000000;
             --background-color: #F9FAFB;
             --card-background: #FFFFFF;
             --text-color: #111827;
             --text-muted: #6B7280;
-            --border-color: #E5E7EB;
+            --border-color: #FF6600;
             --shadow-color: rgba(0, 0, 0, 0.1);
             --primary-gradient: linear-gradient(90deg, #000000 0%, #ffffff 45%, #ffffff 50%, #ffffff 55%, #000000 100%);
             --card-title-color: var(--secondary-color); /* Light mode title color */
@@ -99,7 +99,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 10px;
         }
 
@@ -166,7 +166,7 @@
             align-items: center;
             margin-top: 0px;
             padding: 0px 0;
-            font-size: 0.8rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
             background-color: #f8f9fa; /* Optional: Adds a light background for better contrast */
         }
@@ -205,10 +205,10 @@
 
         .dark-mode {
             --background-color: #000000;
-            --card-background: #333333;
+            --card-background: #111111;
             --text-color: #FFFFFF;
             --text-muted: #9CA3AF;
-            --border-color: #374151;
+            --border-color: #FF6600;
             --shadow-color: rgba(0, 0, 0, 0.5);
             --card-title-color: #FFFFFF; /* Dark mode title color */
         }
@@ -500,14 +500,22 @@
         </ul>
     </nav>
 
-    <h2 class="centered">High Performance Monero Mining Pool</h2>
+    <h2 class="centered">High Performance <br> Monero Mining Pool</h2>
     <div class="intro-text centered">
         <img src="https://www.svgrepo.com/show/303333/monero-logo.svg" alt="Monero Logo" class="monero-logo">
     </div>
+	<section id="support-section">
+            <h2 class="centered"></h2>
+        </section>
+        <section>
+            <div class="button-container">
+                <a href="mailto:support@solopool.us" button class="refresh-button" id="save-address-button">Contact Support</button></a>
+            </div>
+        </section>
 
     <div class="container">
         <section>
-            <h2 class="centered" id="market-stats">Monero Network Statistics</h2>
+            <h2 class="centered" id="market-stats"><i class="fa-brands fa-monero icon"></i>&nbsp; Monero Network Statistics &nbsp;<i class="fa-brands fa-monero icon"></i></h2>
             <div class="grid">
                 <div class="card">
                     <i class="fa-brands fa-monero icon"></i>
@@ -551,7 +559,7 @@
                     <span id="network-difficulty">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-cube icon"></i>
+                    <i class="fas fa-cubes icon"></i>
                     <h3>Network Height</h3>
                     <span id="network-height">Loading...</span>
                 </div>
@@ -571,24 +579,24 @@
                     <h3>Pool HashRate</h3>
                     <span id="pool-hashrate">0 H/s</span>
                 </div>
+		<div class="card">
+                    <i class="fas fa-percent icon"></i>
+                    <h3>Pool Luck</h3>
+                    <span id="current-effort">0 %</span>
+                </div>
                 <div class="card">
                     <i class="fas fa-coins icon"></i>
                     <h3>Round Hashes</h3>
                     <span id="round-hashes">N/A</span>
                 </div>
-                <div class="card">
-                    <i class="fas fa-file-text icon"></i>
-                    <h3>Last Template</h3>
-                    <span id="last-template-fetched">N/A</span>
-                </div>                
-            </div>
+              </div>
         </section>
 
         <section>
             <h2></h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-cube icon"></i>
+                    <i class="fas fa-cubes icon"></i>
                     <h3>Pool Blocks Found</h3>
                     <span id="pool-blocks-found">Loading</span>
                 </div>
@@ -598,10 +606,10 @@
                     <span id="last-block-found">Never</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-percent icon"></i>
-                    <h3>Current Effort</h3>
-                    <span id="current-effort">0 %</span>
-                </div>
+                    <i class="fas fa-file-text icon"></i>
+                    <h3>Last Template</h3>
+                    <span id="last-template-fetched">N/A</span>
+                </div>   
                 <div class="card">
                     <i class="fas fa-calendar icon"></i>
                     <h3>Estimated Time</h3>
@@ -622,7 +630,6 @@
                 <button class="refresh-button" id="save-address-button">Check Address</button>
             </div>
         </section>
-
         <section>
             <h3>Workers Statistics</h3>
             <div class="grid">
@@ -646,17 +653,6 @@
                     <h3>Average HashRate (1D)</h3>
                     <span id="miner-hr-1D">0 H/s</span>
                 </div>
-			<div class="card">
-                    <i class="fas fa-tachometer-alt icon"></i>
-                    <h3>Average HashRate (7D)</h3>
-                    <span id="miner-hr-7D">0 H/s</span>
-                </div>
-			<div class="card">
-                    <i class="fas fa-tachometer-alt icon"></i>
-                    <h3>Average HashRate (1M)</h3>
-                    <span id="miner-hr-1M">0 H/s</span>
-                </div>
-
             </div>
         </section>
 
@@ -814,7 +810,7 @@
                 <li><a href="https://github.com/MiningCryptoLive" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="mailto:celldr69@gmail.com"><i class="fas fa-envelope"></i></a></li>
             </ul>
-            <p style="font-size: 0.7rem;"> &copy; 2025 SOLOPOOL.US - All Rights Reserved</p>
+            <p style="font-size: 0.9rem;"> &copy; 2025 SOLOPOOL.US - All Rights Reserved</p>
         </div>
     </footer>
 
