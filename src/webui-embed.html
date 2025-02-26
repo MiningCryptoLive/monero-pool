@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLOPOOL.US MONERO MINING POOL</title>
+    <title>MINE-XMR.PRO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -99,7 +99,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 10px;
         }
 
@@ -484,7 +484,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <div class="header-content" style="color:#ff6600;">
-            XMR.SOLOPOOL.US
+            MINE-XMR.PRO
         </div>
     </header>
 
@@ -504,18 +504,9 @@
     <div class="intro-text centered">
         <img src="https://www.svgrepo.com/show/303333/monero-logo.svg" alt="Monero Logo" class="monero-logo">
     </div>
-	<section id="support-section">
-            <h2 class="centered"></h2>
-        </section>
-        <section>
-            <div class="button-container">
-                <a href="mailto:support@solopool.us" button class="refresh-button" id="save-address-button">Contact Support</button></a>
-            </div>
-        </section>
-
     <div class="container">
         <section>
-            <h2 class="centered" id="market-stats"> Monero Network Statistics </h2>
+            <h2 class="centered" id="market-stats"><i class="fa-brands fa-monero icon"></i>&nbsp; Monero Network Statistics &nbsp;<i class="fa-brands fa-monero icon"></i></h2>
             <div class="grid">
                 <div class="card">
                     <i class="fa-brands fa-monero icon"></i>
@@ -562,6 +553,11 @@
                     <i class="fas fa-cubes icon"></i>
                     <h3>Network Height</h3>
                     <span id="network-height">Loading...</span>
+                </div>
+			<div class="card">
+                    <i class="fas fa-cubes icon"></i>
+                    <h3>Last Network Block</h3>
+                    <span id="last-network-block">Loading...</span>
                 </div>
             </div>
         </section>
@@ -612,7 +608,7 @@
                 </div>   
                 <div class="card">
                     <i class="fas fa-calendar icon"></i>
-                    <h3>Estimated Block Time</h3>
+                    <h3>Estimated Time</h3>
                     <span id="estimated-block-time">N/A</span>
                 </div>
             </div>
@@ -706,7 +702,7 @@
     {
         "algo": "rx/0",
         "coin": "XMR",
-        "url": "xmr.solopool.us:4200",
+        "url": "mine-xmr.pro:4200",
         "user": "YOUR_WALLET_ADDRESS",
         "pass": "x",
         "keepalive": true,
@@ -760,11 +756,11 @@
             <h3>4. Start Miner without config.json file (OPTIONAL)</h3>
             <p>Linux/MacOS</p>
             <pre>
-    ./xmrig -o xmr.solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
+    ./xmrig -o mine-xmr.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
             </pre>
             <p>Windows</p>
             <pre>
-    xmrig.exe -o xmr.solopool.us:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
+    xmrig.exe -o mine-xmr.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
             </pre>
         </div>
     
@@ -810,7 +806,7 @@
                 <li><a href="https://github.com/MiningCryptoLive" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="mailto:celldr69@gmail.com"><i class="fas fa-envelope"></i></a></li>
             </ul>
-            <p style="font-size: 0.9rem;"> &copy; 2025 SOLOPOOL.US - All Rights Reserved</p>
+            <p style="font-size: 0.9rem;"> &copy; 2025 - MINE-XMR.PRO - All Rights Reserved</p>
         </div>
     </footer>
 
@@ -936,7 +932,7 @@
         // Function to fetch stats from the server
         async function fetchStats() {
             try {
-                const response = await fetch('https://xmr.solopool.us/stats');
+                const response = await fetch('https://mine-xmr.pro/stats');
                 const data = await response.json();
 
                 // Calculate Effort
@@ -971,6 +967,7 @@
                 setText('network-hashrate', format_hashrate(data.network_hashrate));
                 setText('network-difficulty', format_hashes(data.network_difficulty));
                 setText('network-height', data.network_height + 1);
+			setText('last-network-block', format_last_time(data.last_network_block_found));
                 setText('last-template-fetched', format_last_time(data.last_template_fetched));
                 setText('last-block-found', format_last_time(data.last_block_found));
                 setText('pool-blocks-found', data.pool_blocks_found);
