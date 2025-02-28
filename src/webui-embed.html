@@ -99,7 +99,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
         }
 
@@ -500,8 +500,10 @@
         </ul>
     </nav>
 
-    <h2 class="centered">High Performance <br> Monero Mining Pool</h2>
-    <div class="intro-text centered">
+    <h2 class="centered">Anonymous High Performance <br> Monero Mining Pool</h2>
+    <h4><p>Our mining pool is written in C and is focused on performance, efficiency and anonimity</p><p>The single payout method is PPLNS which favors loyal pool miners</p><p>We have both U.S. and E.U. servers which run an interconnected pool with each server running it's own node for redundancy and to offer extremely low-latency connections to geographically disperesed miners</p><p> Go to our <br><li><a href="#getting-started" on click="smoothScroll(event,'getting-started')">Getting Started</a></li><br> For connection Details</p></h4>
+   <h3 class="centered" button type="button" class="btn btn-primary" href="mailto:mine-xmr.pro">Contact Support</button></h3>
+	<div class="intro-text centered">
         <img src="https://www.svgrepo.com/show/303333/monero-logo.svg" alt="Monero Logo" class="monero-logo">
     </div>
     <div class="container">
@@ -608,7 +610,7 @@
                 </div>   
                 <div class="card">
                     <i class="fas fa-calendar icon"></i>
-                    <h3>Estimated Time</h3>
+                    <h3>Estimated Block Time</h3>
                     <span id="estimated-block-time">N/A</span>
                 </div>
             </div>
@@ -697,6 +699,8 @@
             <h3>2. Configure Your Miner using the config.json file</h3>
             <p>Edit your miner configuration file (<code>config.json</code>) to the following settings within the specified sections:</p>
             <h3 class="centered">#Pool Section</h3>
+		<h4 class="centered"> mine-xmr.pro:4200 U.S. Server Connection</h4>
+		<h4 class="centered"> eu.mine-xmr.pro:4200 E.U Server Connection</h4>
             <pre>
 "pools": [
     {
