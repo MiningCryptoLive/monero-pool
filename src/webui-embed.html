@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexuS XMR Pool</title>
+    <title>MINE-XMR.PRO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
 
         :root {
             --primary-color: #FF6600;
-            --secondary-color: #1F2937;
+            --secondary-color: #000000;
             --background-color: #F9FAFB;
             --card-background: #FFFFFF;
             --text-color: #111827;
             --text-muted: #6B7280;
-            --border-color: #E5E7EB;
+            --border-color: #FF6600;
             --shadow-color: rgba(0, 0, 0, 0.1);
             --primary-gradient: linear-gradient(90deg, #000000 0%, #ffffff 45%, #ffffff 50%, #ffffff 55%, #000000 100%);
             --card-title-color: var(--secondary-color); /* Light mode title color */
@@ -34,7 +34,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: var(--primary-gradient);
+            background: var(--secondary-color);
             color: #FFFFFF;
             padding: 5px;
             font-size: 1.5rem;
@@ -100,7 +100,7 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            gap: 10px;
         }
 
         .card {
@@ -119,13 +119,13 @@
         }
 
         .card .icon {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
             margin-bottom: 0px;
         }
 
         .card h3 {
-            font-size: 1rem;
+            font-size: 1.5rem;
             text-align: center;
             margin: 0px 0;
             color: var(--card-title-color); /* Use dynamic color */
@@ -133,7 +133,7 @@
         }
 
         .card span {
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--primary-color);
         }
@@ -166,7 +166,7 @@
             align-items: center;
             margin-top: 0px;
             padding: 0px 0;
-            font-size: 0.8rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
             background-color: #f8f9fa; /* Optional: Adds a light background for better contrast */
         }
@@ -195,7 +195,7 @@
 
         .social-icons a {
             text-decoration: none;
-            color: var(--text-muted);
+            color: var(--primary-color);
             font-size: 1.2rem;
         }
 
@@ -204,11 +204,11 @@
         }
 
         .dark-mode {
-            --background-color: #111827;
-            --card-background: #1F2937;
+            --background-color: #000000;
+            --card-background: #111111;
             --text-color: #FFFFFF;
             --text-muted: #9CA3AF;
-            --border-color: #374151;
+            --border-color: #FF6600;
             --shadow-color: rgba(0, 0, 0, 0.5);
             --card-title-color: #FFFFFF; /* Dark mode title color */
         }
@@ -346,7 +346,7 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: var(--text-muted);
+            color: var(--primary-color);
             font-size: 1rem;
             transition: color 0.3s;
         }
@@ -483,8 +483,8 @@
         <div class="burger-menu" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
-        <div class="header-content">
-            <img src="https://raw.githubusercontent.com/nexusecurus/cosmosnodeman/main/images/nexusecurus.png" alt="NexuSecurus Logo" class="intro-logo">
+        <div class="header-content" style="color:#ff6600;">
+            MINE-XMR.PRO
         </div>
     </header>
 
@@ -494,50 +494,44 @@
         <ul>
             <li><i class="fas fa-chart-bar"></i><a href="#market-stats" onclick="smoothScroll(event, '#market-stats')">Network Stats</a></li>
             <li><i class="fas fa-server"></i><a href="#pool-stats" onclick="smoothScroll(event, '#pool-stats')">Pool Stats</a></li>
-            <li><i class="fas fa-user"></i><a href="#miner-section" onclick="smoothScroll(event, '#miner-section')">Miner Section</a></li>
+            <li><i class="fas fa-user"></i><a href="#miner-section" onclick="smoothScroll(event, '#miner-section')">Miner Dashboard</a></li>
             <li><i class="fas fa-play-circle"></i><a href="#getting-started" onclick="smoothScroll(event, '#getting-started')">Getting Started</a></li>
             <li><i class="fas fa-book"></i><a href="#monero-resources" onclick="smoothScroll(event, '#monero-resources')">Resources</a></li>
         </ul>
     </nav>
 
-    <h4 class="centered"> Mining Pool</h4>
-    <div class="intro-text centered">
+    <h2 class="centered">Anonymous High Performance <br> Monero Mining Pool</h2>
+    <h4 class="centered"><p>Our mining pool is written in C and is focused on performance, efficiency and anonimity</p><p>The single payout method is PPLNS which favors loyal pool miners</p><p>We have both U.S. and E.U. servers which run an interconnected pool with each server running it's own node for redundancy and to offer extremely low-latency connections to geographically disperesed miners</p><p> Go to our <br><a href="#getting-started" on click="smoothScroll(event,'getting-started' --primary-color)">Getting Started</a><br> For connection Details</p></h4>
+   <section>
+<div class="button-container centered">
+                <button class="refresh-button"><a href="mailto:support@mine-xmr.pro">Contact Support</a></button>
+            </div>
+</section>
+
+	<div class="intro-text centered">
         <img src="https://www.svgrepo.com/show/303333/monero-logo.svg" alt="Monero Logo" class="monero-logo">
-        <h2>Monero Manifesto</h2>
     </div>
-
-    <div class="testimonial centered">
-        <blockquote>
-            <em>
-                "Monero aims to improve on existing cryptocurrency design by obscuring sender, recipient, and the XMR amount of every transaction made by the use of RCring encryption and other systems.  
-                Monero (XMR) is famed for its absolute privacy and use case for total anonymity. There is also a huge community that has been built up around this token.  
-                This means that this particular coin is regarded, by many, as more than just money; it is about the community and a common goal of privacy.  
-                The Monero (XMR) mining community is also working very hard to shake off bad press in regards to the use of privacy coins by unsavory entities..."  Source: John Doe
-            </em>
-        </blockquote>
-    </div>
-
     <div class="container">
         <section>
-            <h2 class="centered" id="market-stats">Monero Network Statistics</h2>
+            <h2 class="centered" id="market-stats"><i class="fa-brands fa-monero icon"></i>&nbsp; Monero Network Statistics &nbsp;<i class="fa-brands fa-monero icon"></i></h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-dollar-sign icon"></i>
-                    <h3>Price</h3>
+                    <i class="fa-brands fa-monero icon"></i>
+                    <h3>Market Price</h3>
                     <span id="price-usd">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-calculator icon"></i>
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>Market Cap</h3>
                     <span id="market-cap">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-cube icon"></i>
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>24h Change</h3>
                     <span id="change">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-cube icon"></i>
+                    <i class="fa-brands fa-monero icon"></i>
                     <h3>Circulating Supply</h3>
                     <span id="supply">Loading...</span>
                 </div>
@@ -547,18 +541,23 @@
         <section>
             <h2></h2>
             <div class="grid">
+			<div class="card">
+                    <i class="fa-brands fa-monero icon"></i>
+                    <h3>Block Reward</h3>
+                    <span id="info1">Loading...</span>
+                </div>
                 <div class="card">
                     <i class="fas fa-tachometer-alt icon"></i>
                     <h3>Network HashRate</h3>
                     <span id="network-hashrate">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-calculator icon"></i>
+                    <i class="fa fa-bar-chart icon"></i>
                     <h3>Network Difficulty</h3>
                     <span id="network-difficulty">Loading...</span>
                 </div>
                 <div class="card">
-                    <i class="fas fa-cube icon"></i>
+                    <i class="fas fa-cubes icon"></i>
                     <h3>Network Height</h3>
                     <span id="network-height">Loading...</span>
                 </div>
@@ -578,24 +577,24 @@
                     <h3>Pool HashRate</h3>
                     <span id="pool-hashrate">0 H/s</span>
                 </div>
+		<div class="card">
+                    <i class="fas fa-percent icon"></i>
+                    <h3>Pool Luck</h3>
+                    <span id="current-effort">0 %</span>
+                </div>
                 <div class="card">
                     <i class="fas fa-coins icon"></i>
                     <h3>Round Hashes</h3>
                     <span id="round-hashes">N/A</span>
                 </div>
-                <div class="card">
-                    <i class="fas fa-file-text icon"></i>
-                    <h3>Last Share</h3>
-                    <span id="last-template-fetched">N/A</span>
-                </div>                
-            </div>
+              </div>
         </section>
 
         <section>
             <h2></h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-cube icon"></i>
+                    <i class="fas fa-cubes icon"></i>
                     <h3>Pool Blocks Found</h3>
                     <span id="pool-blocks-found">Loading</span>
                 </div>
@@ -604,14 +603,19 @@
                     <h3>Last Block Found</h3>
                     <span id="last-block-found">Never</span>
                 </div>
-                <div class="card">
-                    <i class="fas fa-coins icon"></i>
-                    <h3>Current Effort</h3>
-                    <span id="current-effort">0 %</span>
+		    <div class="card">
+                    <i class="fas fa-cubes icon"></i>
+                    <h3>Last Block Height</h3>
+                    <span id="last_block_found_height">Loading...</span>
                 </div>
                 <div class="card">
+                    <i class="fas fa-file-text icon"></i>
+                    <h3>Last Template</h3>
+                    <span id="last-template-fetched">N/A</span>
+                </div>   
+                <div class="card">
                     <i class="fas fa-calendar icon"></i>
-                    <h3>Expected Time</h3>
+                    <h3>Estimated Block Time</h3>
                     <span id="estimated-block-time">N/A</span>
                 </div>
             </div>
@@ -629,13 +633,12 @@
                 <button class="refresh-button" id="save-address-button">Check Address</button>
             </div>
         </section>
-
         <section>
             <h3>Workers Statistics</h3>
             <div class="grid">
                 <div class="card">
                     <i class="fas fa-microchip icon"></i>
-                    <h3>Mining Devices</h3>
+                    <h3>Mining Rigs</h3>
                     <span id="worker-count">0</span>
                 </div>
                 <div class="card">
@@ -671,14 +674,14 @@
             <h3>Payment Details</h3>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-credit-card-alt   icon"></i>
+                    <i class="fas fa-credit-card-alt icon"></i>
                     <h3>Payment Method</h3>
                     <span>PPLNS</span>
                 </div>
                 <div class="card">
                     <i class="fas fa-wallet icon"></i>
                     <h3>Payment Threshold</h3>
-                    <span id="payment-threshold">0.01 XMR</span>
+                    <span id="payment-threshold"> XMR</span>
                 </div>
                 <div class="card">
                     <i class="fas fa-percentage icon"></i>
@@ -701,12 +704,14 @@
             <h3>2. Configure Your Miner using the config.json file</h3>
             <p>Edit your miner configuration file (<code>config.json</code>) to the following settings within the specified sections:</p>
             <h3 class="centered">#Pool Section</h3>
+		<h4 class="centered"> mine-xmr.pro:4200 U.S. Server Connection</h4>
+		<h4 class="centered"> eu.mine-xmr.pro:4200 E.U Server Connection</h4>
             <pre>
 "pools": [
     {
         "algo": "rx/0",
         "coin": "XMR",
-        "url": "xmrpool.nexusecurus.com:3333",
+        "url": "mine-xmr.pro:4200",
         "user": "YOUR_WALLET_ADDRESS",
         "pass": "x",
         "keepalive": true,
@@ -760,11 +765,11 @@
             <h3>4. Start Miner without config.json file (OPTIONAL)</h3>
             <p>Linux/MacOS</p>
             <pre>
-    ./xmrig -o xmrpool.nexusecurus.com:3333 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
+    ./xmrig -o mine-xmr.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
             </pre>
             <p>Windows</p>
             <pre>
-    xmrig.exe -o xmrpool.nexusecurus.com:4444 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
+    xmrig.exe -o mine-xmr.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
             </pre>
         </div>
     
@@ -807,12 +812,10 @@
     <footer>
         <div class="footer-content">
             <ul class="social-icons">
-                <li><a href="https://github.com/NexuSecurus" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://twitter.com/NexuSecurus" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://discord.gg/your-discord-server-link" target="_blank"><i class="fab fa-discord"></i></a></li>
-                <li><a href="mailto:support@nexusecurus.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://github.com/MiningCryptoLive" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:celldr69@gmail.com"><i class="fas fa-envelope"></i></a></li>
             </ul>
-            <p style="font-size: 0.7rem;"> &copy; 2025 NexuSecurus - No Rights Reserved</p>
+            <p style="font-size: 0.9rem;"> &copy; 2025 - MINE-XMR.PRO - All Rights Reserved</p>
         </div>
     </footer>
 
@@ -915,7 +918,7 @@
             if (h < 1e-12) return "0 H";
             else if (h < 1e-9) return max_precision(h * 1e+12, 0) + " pH";
             else if (h < 1e-6) return max_precision(h * 1e+9, 0) + " nH";
-            else if (h < 1e-3) return max_precision(h * 1e+6, 0) + " μH";
+            else if (h < 1e-3) return max_precision(h * 1e+6, 0) + " Î¼H";
             else if (h < 1) return max_precision(h * 1e+3, 0) + " mH";
             else if (h < 1e+3) return parseInt(h) + " H";
             else if (h < 1e+6) return max_precision(h * 1e-3, 2) + " KH";
@@ -938,7 +941,7 @@
         // Function to fetch stats from the server
         async function fetchStats() {
             try {
-                const response = await fetch('https://xmrpool.nexusecurus.com/stats');
+                const response = await fetch('https://mine-xmr.pro/stats');
                 const data = await response.json();
 
                 // Calculate Effort
@@ -973,6 +976,7 @@
                 setText('network-hashrate', format_hashrate(data.network_hashrate));
                 setText('network-difficulty', format_hashes(data.network_difficulty));
                 setText('network-height', data.network_height + 1);
+	setText('last-network-block', format_last_time(data.last_network_block));
                 setText('last-template-fetched', format_last_time(data.last_template_fetched));
                 setText('last-block-found', format_last_time(data.last_block_found));
                 setText('pool-blocks-found', data.pool_blocks_found);
@@ -1074,5 +1078,23 @@
             fetchMoneroData();
             setInterval(fetchMoneroData, 60000); // Refresh every 30 seconds (30,000 milliseconds)
         </script>
+    <script>
+const getBtcData1 = async () => {
+   fetch('https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD')
+  .then(response => response.json())
+  .then(data1 => {
+    console.log(data1);
+    document.getElementById("info1").innerHTML = '<b style="color:#ff6600;"> $' + 0.6 * data1.USD + '</b>'
+    
+  });
+}
+getBtcData1();
+tcount=setInterval(function(){
+  tcount++
+  if (tcount==10) {getBtcData1(); tcount=0}
+  document.getElementById("infotime1").innerHTML = 'Next update in ' + (900-tcount) + ' seconds'
+},1000);
+
+</script>
 </body>
 </html>
