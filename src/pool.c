@@ -162,7 +162,7 @@ typedef struct config_t
     char pool_wallet[ADDRESS_MAX];
     char pool_fee_wallet[ADDRESS_MAX];
     uint64_t pool_start_diff;
-    uint64_t pool_fixed_diff2;
+    uint64_t pool_fixed_diff_2;
     uint64_t pool_fixed_diff;
     uint64_t pool_nicehash_diff;
     double share_mul;
@@ -172,7 +172,7 @@ typedef struct config_t
     double payment_threshold;
     char pool_listen[MAX_HOST];
     uint16_t pool_port;
-    uint16_t pool_port2;
+    uint16_t pool_port_2;
     uint16_t pool_ssl_port;
     uint32_t pool_syn_backlog;
     uint32_t log_level;
