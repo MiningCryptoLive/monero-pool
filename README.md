@@ -210,7 +210,7 @@ keep your website completely separate, served by Apache or Nginx for example.
 Example NGINX server configuration. sudo nano /etc/nginx/sites-available/default
 
 add the below code:
-##
+<pre>
 server {
 	listen 80;
 	root /path/to/monero-pool/src;
@@ -220,7 +220,7 @@ server {
 	proxy_pass http://127.0.0.1:4243/stats;
    	}
  }
-##
+</pre>
 close and save.
 sudo service nginx restart
 
