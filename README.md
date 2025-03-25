@@ -230,7 +230,7 @@ $ sudo apt-get install python3-certbot-nginx
 
 Then to install your free ssl certificate run
 
-$ sudo certbot --nginx -d <your-pool-domain>
+$ sudo certbot --nginx -d your.pool.domain
 
 Now you can access your pool's frontend via https! Share your pool link!
 </pre>
