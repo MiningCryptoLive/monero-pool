@@ -201,21 +201,39 @@ command-line parameters:
 
 ## Web UI
 
-This project is not designed to be a one-stop solution for running a public
-pool; it is an highly efficient mining pool implementation. For a public pool,
-which typically entails having a fancy web UI, that part is down to you. There
-is howeveer a minimal web UI that gets served on the port specified in the
-config file. If you plan on running a *public* pool via this UI (or any other
-for that matter), it's advisable to use either Apache or Nginx as a proxy in
-   front of this with some appropriate caching configured. The goal is to
-   offload browser based traffic to something built for the task and allow the
-   pool to focus on its primary function - serving miners.
-
-If you intend to make changes to this minimal web UI, note that the HTML gets
-compiled into the pool binary. The single web page that gets served simply makes
+This pool has an updated Web-UI. You can edit it to your liking in src/webui-embed.html
+Note that the HTML gets compiled into the pool binary. The single web page that gets served simply makes
 use of a JSON endpoint to populate the stats. Thus, a sensible option for your
 own web UI is to simply make use of that endpoint (for stats and balances), and
 keep your website completely separate, served by Apache or Nginx for example.
+
+Example NGINX server configuration. sudo nano /etc/nginx/sites-available/default
+
+add the below code:
+
+server {
+	listen 80;
+	root /path/to/monero-pool/src;
+	index index.html webui-embed.html;
+	server_name your.domain.name;
+	locations /stats {
+	proxy_pass http://127.0.0.1:4243/stats;
+   	}
+ }
+
+close and save.
+sudo service nginx restart
+
+$ sudo add-apt-repository ppa:certbot/certbot
+$ sudo apt-get update
+$ sudo apt-get install python3-certbot-nginx
+
+Then to install your free ssl certificate run
+
+$ sudo certbot --nginx -d <your-pool-domain>
+
+Now you can access your pool's frontend via https! Share your pool link!
+
 
 ## SSL
 
