@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EU.MINE-XMR.PRO</title>
+    <title>XMR.SOLOPOOL.PRO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -484,7 +484,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <div class="header-content" style="color:#ff6600;">
-            EU.MINE-XMR.PRO
+            XMR.SOLOPOOL.PRO
         </div>
     </header>
 
@@ -603,11 +603,6 @@
                     <h3>Last Block Found</h3>
                     <span id="last-block-found">Never</span>
                 </div>
-		    <div class="card">
-                    <i class="fas fa-cubes icon"></i>
-                    <h3>Last Block Height</h3>
-                    <span id="last_block_found_height">Loading...</span>
-                </div>
                 <div class="card">
                     <i class="fas fa-file-text icon"></i>
                     <h3>Last Template</h3>
@@ -704,14 +699,13 @@
             <h3>2. Configure Your Miner using the config.json file</h3>
             <p>Edit your miner configuration file (<code>config.json</code>) to the following settings within the specified sections:</p>
             <h3 class="centered">#Pool Section</h3>
-		<h4 class="centered"> mine-xmr.pro:4200 U.S. Server Connection</h4>
-		<h4 class="centered"> eu.mine-xmr.pro:4200 E.U Server Connection</h4>
+		<h4 class="centered"> xmr.solopool.pro:4200 U.S. Server Connection</h4>
             <pre>
 "pools": [
     {
         "algo": "rx/0",
         "coin": "XMR",
-        "url": "mine-xmr.pro:4200",
+        "url": "xmr.solopool.pro:4200",
         "user": "YOUR_WALLET_ADDRESS",
         "pass": "x",
         "keepalive": true,
@@ -765,11 +759,11 @@
             <h3>4. Start Miner without config.json file (OPTIONAL)</h3>
             <p>Linux/MacOS</p>
             <pre>
-    ./xmrig -o mine-xmr.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
+    ./xmrig -o xmr.solopool.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit --randomx-1gb-pages
             </pre>
             <p>Windows</p>
             <pre>
-    xmrig.exe -o mine-xmr.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
+    xmrig.exe -o xmr.solopool.pro:4200 -u YOUR_WALLET_ADDRESS -p x --algo=rx/0 --coin=monero --huge-pages-jit
             </pre>
         </div>
     
@@ -815,7 +809,7 @@
                 <li><a href="https://github.com/MiningCryptoLive" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="mailto:celldr69@gmail.com"><i class="fas fa-envelope"></i></a></li>
             </ul>
-            <p style="font-size: 0.9rem;"> &copy; 2025 - EU.MINE-XMR.PRO - All Rights Reserved</p>
+            <p style="font-size: 0.9rem;"> &copy; 2025 - XMR.SOLOPOOL.PRO - All Rights Reserved</p>
         </div>
     </footer>
 
@@ -941,7 +935,7 @@
         // Function to fetch stats from the server
         async function fetchStats() {
             try {
-                const response = await fetch('https://eu.mine-xmr.pro/stats');
+                const response = await fetch('https://xmr.solopool.pro/stats');
                 const data = await response.json();
 
                 // Calculate Effort
